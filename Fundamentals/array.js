@@ -39,3 +39,12 @@ const list = [];
 numsCopy.forEach((num) => list.unshift(num));
 console.log(list);
 
+// * ARRAY METHODS -
+
+const CalcArr = (list) =>
+	(
+		list.map((num) => Math.pow(num, 2)).reduce((total, num) => total + num, 0) /
+		list.length
+	).toFixed(2);
+
+console.log(CalcArr(nums));

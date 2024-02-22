@@ -66,6 +66,8 @@ console.log(Object.entries(person));
 
 person.isRich = true;
 
+delete person.isRich;
+
 console.log(person);
 
 Object.freeze(person);
