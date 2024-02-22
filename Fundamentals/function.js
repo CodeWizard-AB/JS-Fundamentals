@@ -98,3 +98,16 @@ const addition = (v1, v2, v3) =>
 	[v1, v2, v3].reduce((total, num) => total + num, 0);
 
 console.log(addition(3, 5, 6));
+
+const pi = () => Math.PI;
+console.log(parseFloat(pi().toFixed(2)));
+
+const operationMath = (v1, v2) => {
+	const add = v1 + v2;
+	const sub = Math.abs(v1 - v2);
+	const multiplication = v1 * v2;
+	const division = v1 / v2;
+	return { add, sub, multiplication, division };
+};
+
+console.log(operationMath(3, 4));
