@@ -70,3 +70,7 @@ console.log(person);
 
 Object.freeze(person);
 
+for (const key in person) console.log(`${key} = ${person[key]} `);
+for (const [key, value] of Object.entries(person)) {
+	console.log(key, value);
+}

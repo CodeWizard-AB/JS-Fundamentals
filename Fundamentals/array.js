@@ -38,3 +38,4 @@ console.log(empty);
 const list = [];
 numsCopy.forEach((num) => list.unshift(num));
 console.log(list);
+
