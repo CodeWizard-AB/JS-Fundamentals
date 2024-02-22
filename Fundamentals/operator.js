@@ -26,3 +26,27 @@ console.log(restaurantCopy);
 const maxValue = Math.max(...list1);
 const minValue = Math.min(...list1);
 console.log(maxValue, minValue);
+
+// * DESTRUCTURING -
+
+const university = {
+	owner: "David Gray",
+	founded: 2000,
+	studentsNo: 3000,
+};
+
+const { owner: founder, founded } = university;
+console.log(founder, founded);
+
+const numbers = [3, 6, 8, 9, 2];
+const [three, six, ...others] = numbers;
+console.log(three, six, others);
+
+const list4 = [3, 4, 5];
+const [first, , last] = list4;
+console.log(last, first);
+
+const coffee = ["milk", "powder"];
+const [milk, powder] = coffee;
+
+console.log(milk, powder);
