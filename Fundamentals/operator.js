@@ -59,3 +59,16 @@ const mathOperation = function (value1, value2) {
 
 const [cubicOf2, cubicOf3] = mathOperation(2, 3);
 console.log(cubicOf2, cubicOf3);
+
+const keyValue = [
+	["students", 4000],
+	["branch", 5],
+];
+
+const [[, studentNo], [, branchNo]] = keyValue;
+
+console.log(studentNo, branchNo);
+
+keyValue.forEach(([key, value]) => {
+  console.log(`Key: ${key} || value: ${value}`);
+});
