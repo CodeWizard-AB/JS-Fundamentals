@@ -50,3 +50,12 @@ const coffee = ["milk", "powder"];
 const [milk, powder] = coffee;
 
 console.log(milk, powder);
+
+const mathOperation = function (value1, value2) {
+	const cubic1 = Math.pow(value1, 3);
+	const cubic2 = Math.pow(value2, 3);
+	return [cubic1, cubic2];
+};
+
+const [cubicOf2, cubicOf3] = mathOperation(2, 3);
+console.log(cubicOf2, cubicOf3);
