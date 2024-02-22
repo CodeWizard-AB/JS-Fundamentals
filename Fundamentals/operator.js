@@ -1,6 +1,6 @@
 "use strict";
 
-// * SPREAD OPERATOR - RIGHT SIDE
+// * SPREAD || REST OPERATOR
 
 const nums = [4, 5];
 const list1 = [1, 2, 3, ...nums];
@@ -27,7 +27,7 @@ const maxValue = Math.max(...list1);
 const minValue = Math.min(...list1);
 console.log(maxValue, minValue);
 
-// * DESTRUCTURING -
+// * DESTRUCTURING
 
 const university = {
 	owner: "David Gray",
@@ -37,6 +37,15 @@ const university = {
 
 const { owner: founder, founded } = university;
 console.log(founder, founded);
+
+const cars = {
+	color: "white",
+	brand: "BMW",
+	price: 30000,
+};
+
+const { color, ...carData } = cars;
+console.log(carData);
 
 const numbers = [3, 6, 8, 9, 2];
 const [three, six, ...others] = numbers;
@@ -70,5 +79,5 @@ const [[, studentNo], [, branchNo]] = keyValue;
 console.log(studentNo, branchNo);
 
 keyValue.forEach(([key, value]) => {
-  console.log(`Key: ${key} || value: ${value}`);
+	console.log(`Key: ${key} || value: ${value}`);
 });
