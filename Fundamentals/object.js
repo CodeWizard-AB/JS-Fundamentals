@@ -59,3 +59,7 @@ const person = {
 Object.values(person).forEach((value) =>
 	console.log(`key:  ${value} | type: ${typeof value}`)
 );
+
+console.log(Object.keys(person));
+console.log(Object.values(person));
+console.log(Object.entries(person));
