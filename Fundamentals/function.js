@@ -91,3 +91,10 @@ console.log(removeDup(fruits));
 
 const string = "python";
 console.log([...string]);
+
+// * ARROW FUNCTION -
+
+const addition = (v1, v2, v3) =>
+	[v1, v2, v3].reduce((total, num) => total + num, 0);
+
+console.log(addition(3, 5, 6));
