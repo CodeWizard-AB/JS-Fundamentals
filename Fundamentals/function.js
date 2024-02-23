@@ -111,3 +111,42 @@ const operationMath = (v1, v2) => {
 };
 
 console.log(operationMath(3, 4));
+
+// * CLOSURE -
+
+const food = function () {
+	let chicken = 0;
+	return function () {
+		chicken++;
+		return chicken;
+	};
+};
+
+const firstFood = food();
+const secondFood = food();
+
+console.log(firstFood());
+console.log(firstFood());
+console.log(firstFood());
+console.log(firstFood());
+
+console.log(secondFood());
+console.log(secondFood());
+
+// * CALLBACK FUNCTION -
+
+const isOdd = (num) => num % 2 !== 0;
+const isEven = (num) => num % 2 === 0;
+
+const calcFun = function (list, fn) {
+	const result = [];
+	for (const num of list) {
+		if (fn(num)) {
+			result.push(num);
+		}
+	}
+	return result;
+};
+
+console.log(calcFun([3, 4, 6, 7], isOdd));
+console.log(calcFun([3, 4, 6, 7], isEven));
