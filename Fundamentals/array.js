@@ -76,3 +76,28 @@ const cities = [
 const bigCities = cities.filter((city) => city.population >= 3000000);
 
 console.log(bigCities);
+
+// * FIND METHOD -
+
+const smallestCity = cities.find((city) => city.population <= 2000000);
+console.log(smallestCity.name);
+
+// * REDUCE METHOD -
+
+const sum = arr.reduce((acc, num) => acc + num);
+console.log(sum);
+
+const products = [
+	{ chip: "core-i9", model: "lenova", price: 1600 },
+	{ chip: "core-i7", model: "acer", price: 1500 },
+	{ chip: "core-i5", model: "hp", price: 1400 },
+];
+
+products.forEach((product) => console.log(product.chip));
+const expensivePc = products.find(({ price }) => price >= 1500);
+
+console.log(expensivePc);
+
+const totalPrice = products.reduce((total, { price }) => total + price, 0);
+
+console.log(totalPrice);
