@@ -150,3 +150,19 @@ const calcFun = function (list, fn) {
 
 console.log(calcFun([3, 4, 6, 7], isOdd));
 console.log(calcFun([3, 4, 6, 7], isEven));
+
+const transform = function (text, callback) {
+	console.log(`
+Original text: ${text}
+Transformed text: ${callback(text)}
+Tranformed by: ${callback.name}
+	`);
+};
+
+const capitalize = (text) =>
+	text
+		.split(" ")
+		.map((word) => word[0].toUpperCase() + word.slice(1))
+		.join(" ");
+
+transform("python is the easiest language", capitalize);
