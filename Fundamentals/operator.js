@@ -84,7 +84,7 @@ keyValue.forEach(([key, value]) => {
 
 // * ES6 FEATURE -
 
-// * OPTIONAL CHAINING 
+// * OPTIONAL CHAINING
 
 const product = {
 	productName: "Macbook",
@@ -97,3 +97,11 @@ const product = {
 };
 
 console.log(product.productDetail?.price);
+
+// * COMPARISON OPERATOR -
+
+const one = 1;
+const oneString = "1";
+
+console.log(one == oneString);
+console.log(one === oneString);

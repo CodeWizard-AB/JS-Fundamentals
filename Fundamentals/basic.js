@@ -77,3 +77,22 @@ console.log(Boolean("") === false);
 if (Boolean("") === false) {
 	console.log("It is a false value");
 }
+
+// * SCOPE - GLOBAL | LOCAL | BLOCK | FUNCTION
+
+const globalVar = 20; // * global scope
+
+const myFun = function () {
+	const localVar = 4; // * local | function scope
+	if (globalVar > localVar) {
+		const blockVar = false;
+		console.log("global is greater than local");
+		console.log(blockVar);
+	}
+	// console.log(blockVar);
+	return [localVar, globalVar];
+};
+
+console.log(myFun());
+
+for (let i = 1; i <= 5; i++) console.log(i);
