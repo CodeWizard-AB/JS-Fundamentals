@@ -81,3 +81,19 @@ console.log(studentNo, branchNo);
 keyValue.forEach(([key, value]) => {
 	console.log(`Key: ${key} || value: ${value}`);
 });
+
+// * ES6 FEATURE -
+
+// * OPTIONAL CHAINING 
+
+const product = {
+	productName: "Macbook",
+	productData: {
+		price: 2500,
+		chip: "M3pro",
+		series: "M3",
+		store: "apple",
+	},
+};
+
+console.log(product.productDetail?.price);
