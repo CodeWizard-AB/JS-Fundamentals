@@ -12,6 +12,23 @@ const third = mulitply(5, 6);
 
 console.log(first, second, third);
 
+const flight = "FTG349";
+const jonas = {
+	job: "teacher",
+	passportNo: 2000,
+};
+
+const checkPassport = function (flight, obj) {
+	obj.job = obj.job[0].toUpperCase() + obj.job.slice(1);
+	flight = flight + 5;
+	if (String(obj.passportNo).includes(0)) {
+		console.log("Passport Checked", flight, obj.job);
+	}
+};
+
+checkPassport(flight, jonas);
+console.log(flight, jonas);
+
 const square = (num) => Math.pow(num, 2);
 
 const sq2 = square(2);
@@ -166,3 +183,14 @@ const capitalize = (text) =>
 		.join(" ");
 
 transform("python is the easiest language", capitalize);
+
+// * FUNCTION ARGUMENTS -
+
+const argumentsFun = function () {
+	console.log(arguments);
+	for (const key in arguments) console.log(arguments[key]);
+	const double = Object.values(arguments).map((num) => num * 2);
+	console.log(double);
+};
+
+argumentsFun(3, 4, 6);
