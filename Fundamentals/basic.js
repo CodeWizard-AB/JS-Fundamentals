@@ -43,6 +43,17 @@ console.log(list[4]);
 const obj = { roll: 40, class: 10 };
 const arr = [3, 4, 5];
 
+const objFun = function () {
+	obj.roll = 45;
+	obj.name = "Jane";
+	arr[0] = 1;
+};
+
+console.log(arr, obj);
+
+objFun();
+console.log(arr, obj);
+
 const person1 = { job: "Teacher", salary: 2000 };
 const person2 = person1;
 
@@ -61,3 +72,8 @@ console.log(Boolean(false));
 console.log(Boolean([]));
 console.log(Boolean({}));
 console.log(Boolean(4));
+console.log(Boolean("") === false);
+
+if (Boolean("") === false) {
+	console.log("It is a false value");
+}

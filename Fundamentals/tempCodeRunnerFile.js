@@ -1,1 +1,1 @@
- a, b, c
+console.log(Boolean("") === false);
