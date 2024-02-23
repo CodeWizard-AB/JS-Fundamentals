@@ -18,22 +18,22 @@ const sub = (a, b, c) => {
 
 console.log(sub(3, 5));
 
-const myFunction = function () {
-	const sum = 3 + 6;
-};
+const myFunction = function () {};
 console.log(myFunction());
 
-const add = (a, b) => {
-	a + b;
+const bar = (a) => {
 	return;
 };
-console.log(add());
+console.log(bar());
 
 const player = {
 	owner: "Virat",
 	type: "Batsman",
 };
 console.log(player.salary);
+
+delete player.type;
+console.log(player.type);
 
 const list = ["Chris", "Pell", "Nomal"];
 console.log(list[4]);
@@ -48,3 +48,16 @@ const person2 = person1;
 
 person2.job = "Artist";
 console.log(person1, person2);
+
+// * TRUTHY AND FALSY VALUES -
+
+console.log(Boolean(""));
+console.log(Boolean(0));
+console.log(Boolean(NaN));
+console.log(Boolean(null));
+console.log(Boolean(undefined));
+console.log(Boolean(false));
+
+console.log(Boolean([]));
+console.log(Boolean({}));
+console.log(Boolean(4));
