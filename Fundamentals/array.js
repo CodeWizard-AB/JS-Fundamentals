@@ -48,3 +48,12 @@ const CalcArr = (list) =>
 	).toFixed(2);
 
 console.log(CalcArr(nums));
+
+// * MAP METHOD
+
+const arr = [1, 2, 3, 4, 5];
+const doubleArr = arr.map((num) => Math.pow(num, 2));
+const cubicArr = arr.map((num) => Math.pow(num, 3));
+
+console.log(doubleArr);
+console.log(cubicArr);
