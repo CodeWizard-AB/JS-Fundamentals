@@ -54,6 +54,25 @@ console.log(CalcArr(nums));
 const arr = [1, 2, 3, 4, 5];
 const doubleArr = arr.map((num) => Math.pow(num, 2));
 const cubicArr = arr.map((num) => Math.pow(num, 3));
+const bonusArr = arr.map((num) => num + 5);
+const friends = ["Melis", "David", "Grane", "Chris"];
+const nameLength = friends.map((friend) => friend.length);
 
+console.log(nameLength);
 console.log(doubleArr);
 console.log(cubicArr);
+console.log(bonusArr);
+
+// * FILTER METHOD -
+
+const cities = [
+	{ name: "Los Angeles", population: 3792621 },
+	{ name: "New York", population: 8175133 },
+	{ name: "Chicago", population: 2695598 },
+	{ name: "Houston", population: 2099451 },
+	{ name: "Philadelphia", population: 1526006 },
+];
+
+const bigCities = cities.filter((city) => city.population >= 3000000);
+
+console.log(bigCities);
