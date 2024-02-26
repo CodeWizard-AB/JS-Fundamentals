@@ -11,10 +11,19 @@
 			color: white;
 			background-color: black;
 		}
+		button {
+			cursor: pointer;
+			font-size: 1.2rem;
+		}
 	</style>
 	<body>
 		<h1>Application Programming Interface</h1>
-		<button onclick="loadFunction()">Load Data</button>
+		<button onclick="loadFunction()">Load User Name</button>
+		<ul id="user_container"></ul>
+		<button onclick="loadPhotos()">Image Upload</button>
+		<div id="photos_container">
+		
+		</div>
 		<script src="api.js"></script>
 	</body>
 </html>
