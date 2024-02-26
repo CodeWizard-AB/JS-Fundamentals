@@ -24,7 +24,7 @@ const loadPhotos = () => {
 
 const displayPhotos = (data) => {
 	const photoContainer = document.getElementById("photos_container");
-	data.slice(0, 3).forEach((photo) => {
+	data.slice(0, 2).forEach((photo) => {
 		const image = `	<img src=${photo.url}>`;
 		photoContainer.insertAdjacentHTML("beforeend", image);
 	});
