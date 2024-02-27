@@ -5,7 +5,7 @@ const person = {
 	founder: "ola",
 	location: "India",
 	isRich: true,
-	childs: ["James", "Chris"],
+	children: ["James", "Chris"],
 	university: {
 		year: 2012,
 		uniName: "Harvard",
