@@ -7,7 +7,7 @@ const loadFunction = () => {
 		.then((json) => displayData(json));
 };
 
-const displayData = function (data) {
+const displayData = (data) => {
 	const userContainer = document.getElementById("user_container");
 	data.forEach((user) => {
 		const li = `<li>${user.username}</li>`;
