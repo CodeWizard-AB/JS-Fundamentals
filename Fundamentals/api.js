@@ -29,3 +29,22 @@ const displayPhotos = (data) => {
 		photoContainer.insertAdjacentHTML("beforeend", image);
 	});
 };
+
+const loadAlbums = () => {
+	const url = "https://jsonplaceholder.typicode.com/albums";
+	fetch(url)
+		.then((response) => response.json())
+		.then((json) => console.log(json))
+		.catch((error) => console.log(error));
+};
+
+const loadAlbum = async () => {
+	try {
+		const url = "https://jsonplaceholder.typicode.com/albums";
+		const response = await fetch(url);
+		const data = await response.json();
+		console.log(data.slice(0, 2));
+	} catch (error) {
+		console.log(error);
+	}
+};
