@@ -33,4 +33,13 @@ console.log(b);
 
 // * SETTIMEOUT | SETINTERVAL -
 
+const timerApp = () => {
+	let time = 1;
+	const timer = setInterval(() => {
+		console.log(time);
+		time++;
+		if (time > 5) clearInterval(timer);
+	}, 2000);
+};
 
+timerApp();
