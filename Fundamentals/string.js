@@ -35,3 +35,15 @@ if (4 > 2) {
 	console.log(game, playing, isRich);
 }
 
+// * PROMISE / ASYNC / AWAIT -
+
+const success = false;
+const promiseFun = () => {
+	return new Promise((resolve, reject) => {
+		success ? resolve(success) : reject(success);
+	});
+};
+
+promiseFun()
+	.then((data) => console.log(data))
+	.catch((error) => console.log(error));

@@ -17,3 +17,20 @@ const personParse = JSON.parse(personJson);
 
 console.log(personJson);
 console.log(personParse);
+
+// * ASYNCHRONOUS VS SYNCHRONOUS
+
+let [a, b, c] = [1, 2, 3];
+const equation = (x) => a * Math.pow(x, 2) + b * x + c;
+
+setTimeout(() => {
+	console.log(c);
+	console.log("Total calculation is " + equation(2));
+}, 2000);
+
+console.log(a);
+console.log(b);
+
+// * SETTIMEOUT | SETINTERVAL -
+
+
