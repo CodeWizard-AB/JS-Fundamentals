@@ -66,14 +66,14 @@
 
 const getUser = (userId) => {
 	return new Promise((resolve, reject) => {
-		console.log("Get user from the database");
+		console.log("Get user from the database.");
 		setTimeout(() => {
 			userId
 				? resolve({
 						userId,
 						username: "john",
 				  })
-				: reject("userId not found");
+				: reject("userId not found!");
 		}, 1000);
 	});
 };
@@ -89,7 +89,7 @@ const getServices = (user) => {
 
 const getCost = (services) => {
 	return new Promise((resolve) => {
-		console.log(`Calculate service costs of ${services}`);
+		console.log(`Calculate service costs of ${services}.`);
 		setTimeout(() => {
 			resolve(services.length * 100);
 		}, 3000);
@@ -97,10 +97,16 @@ const getCost = (services) => {
 };
 
 const showServicesCost = async () => {
-	const user = await getUser(78);
-	const services = await getServices(user);
-	const cost = await getCost(services);
-	console.log(`The total service cost is ${cost}`);
+	try {
+		const user = await getUser(23);
+		const services = await getServices(user);
+		const cost = await getCost(services);
+		console.log(`The total service cost is ${cost}.`);
+	} catch (error) {
+		console.log(error);
+	} finally {
+		console.log("Function excution is finished.");
+	}
 };
 
 showServicesCost();
