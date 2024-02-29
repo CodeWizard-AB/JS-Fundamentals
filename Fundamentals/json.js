@@ -42,4 +42,16 @@ const timerApp = () => {
 	}, 2000);
 };
 
-timerApp();
+// timerApp();
+
+// * TRY | CATCH | FINALLY -
+
+try {
+	console.log(number);
+} catch (error) {
+	console.log(error.message);
+} finally {
+	console.log("all done");
+}
+
+console.log(7);
