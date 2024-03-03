@@ -48,3 +48,36 @@ const loadAlbum = async () => {
 		console.log(error);
 	}
 };
+
+const currencyLoad = async () => {
+	const url =
+		"https://cdn.jsdelivr.net/gh/fawazahmed0/currency-api@1/latest/currencies.min.json";
+	const response = await fetch(url);
+	const data = await response.json();
+	console.log(data);
+};
+
+currencyLoad();
+
+(async () => {
+	try {
+		const url =
+			"https://api.open-meteo.com/v1/forecast?latitude=52.52&longitude=13.41&hourly=temperature_2m";
+		const response = await fetch(url);
+		const data = await response.json();
+		console.log(data);
+	} catch (error) {
+		console.log(error);
+	}
+})();
+
+const ings = ["olive", "spinach", "onion"];
+const timer = setTimeout(
+	(ing1, ing2) => {
+		console.log(`Here is your pizza with ${ing1} and ${ing2} 🍕`);
+	},
+	2000,
+	...ings
+);
+
+if (ings.includes("onion")) clearTimeout(timer);
