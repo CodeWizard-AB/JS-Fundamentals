@@ -48,5 +48,3 @@ const teacher = {
 		return `${this.firstName} ${this.lastName}`;
 	},
 };
-
-console.log(teacher.fullName());

@@ -37,13 +37,18 @@ if (4 > 2) {
 
 // * PROMISE / ASYNC / AWAIT -
 
-const success = false;
-const promiseFun = () => {
-	return new Promise((resolve, reject) => {
-		success ? resolve(success) : reject(success);
-	});
-};
+// const success = false;
+// const promiseFun = () => {
+// 	return new Promise((resolve, reject) => {
+// 		success ? resolve(success) : reject(success);
+// 	});
+// };
 
-promiseFun()
-	.then((data) => console.log(data))
-	.catch((error) => console.log(error));
+// // promiseFun()
+// // 	.then((data) => console.log(data))
+// // 	.catch((error) => console.log(error));
+
+const list = [3, 4, 5, 8];
+
+const lastValue = list.forEach((num) => num);
+console.log(lastValue);
